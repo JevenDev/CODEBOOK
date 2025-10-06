@@ -1,0 +1,49 @@
+#stage{
+  position: relative;
+  padding-top: 50px;
+  width: 960px;
+  margin: 0 auto 40px;
+}
+
+#stage canvas{
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 5px #019dd8; 
+}
+
+.side{
+    position: absolute;
+    top: 25px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.side-left{
+    left: -325px;
+    transform: rotate(-25deg);
+    animation: wiggle-left 3s ease-in-out infinite;
+}
+
+.side-right{ 
+    right: -325px; 
+    transform: rotate(25deg);
+    animation: wiggle-right 3s ease-in-out infinite;
+}
+
+p a:visited{
+    color: rgb(0, 147, 196);
+}
+
+/* goofy animations to make the blue emojis wiggle :3 */
+@keyframes wiggle-right {
+    0%   {transform: rotate(22deg) translateY(0px);}
+    50%  {transform: rotate(20deg) translateY(-10px);}
+    100% {transform: rotate(22deg) translateY(0px);}
+}
+
+/* same as above but i inverted the direction and vertical translation for a bit of variation */
+@keyframes wiggle-left {
+    0%   {transform: rotate(-22deg) translateY(0px);}
+    50%  {transform: rotate(-20deg) translateY(10px);}
+    100% {transform: rotate(-22deg) translateY(0px);}
+}

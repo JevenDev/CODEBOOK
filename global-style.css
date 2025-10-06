@@ -1,0 +1,107 @@
+/* just a set of styling used across multiple pages */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body{
+    padding: 0;
+    margin:0;
+    height:100%;
+    background:#111;
+    font-family: Calibri;
+    color: white;
+    text-align: center;
+}
+
+canvas{
+    display:block;
+    margin:auto;
+}
+
+h1{
+    padding-top: 30px;
+    margin: 0;
+}
+
+h2{
+    color: #3b3b3b;
+    font-style: italic;
+    margin: 0;
+}
+
+.description-container{
+    width: 960px;
+    margin: 0 auto 40px;
+    text-align: left;
+    
+}
+
+.description-container p{
+    padding-top: 20px;
+    font-size: 1.25em;
+}
+
+.description-container h2{
+    font-size: 1.8em;
+}
+
+.description{
+    margin: 0;
+    color: #fff;
+    font-style: normal;
+}
+
+.description-image img{
+    width: 100%;
+}
+
+.description-image{
+    padding: 20px 0 10px 0;
+}
+
+.description-image p{
+    color: #727272;
+    font-style: italic;
+    font-size: 1.25em;
+    padding: 0 0 10px 0;
+    /* margin: 0; */
+    text-align: center;
+}
+
+.sub-head{
+    text-align: left;
+    margin: 0 auto;
+    width: 960px;
+    font-size: 1.8em;
+}
+
+.image-neighbors,
+.description-image img
+{
+    display: grid;
+    gap: 10px;
+    grid-template-columns:repeat(2, 1fr);
+    max-width: 100%;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.wip{
+    border: 2px dashed #3b3b3b;
+}
+
+.back-btn{
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-btn:hover{ 
+    background:#222; 
+}

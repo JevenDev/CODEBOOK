@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Codebook Week 3: ml5.js exploration</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <script src="w3-sketch.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/global-style.css">
+    <!-- :3 if ur reading this hi :3 -->
+</head>
+<body>
+    <a class="back-btn" href="/index.html">Back</a>
+
+    <h1>Codebook Week 3: ml5.js exploration</h1>
+    <h2>using ml5.js to make whatever this is :3</h2>
+
+    <div id="stage">
+        <img src="images/palmLarge.png" class="side side-left">
+        <img src="images/pointLarge.png" class="side side-right">
+    </div>
+    <br>
+    <div class="description-container">
+        <h2 class="description sub-head">But Jeven, what is this mess!?!?</h2>
+
+        <p class="description">
+            For this weeks codebook, I chose to take the ml5.js approach. This was a brand new library to me, and I was a bit nervous about diving into it.
+            The main idea behind this project is to create a virtual "consent" system using hand gestures. I thought this was a fun and interesting way to 
+            relate back to the Excavating AI and Anatomy of an AI System reading we did. This sketch treats the webcam as a site of extraction, 
+            the feed is blurred by default (opt-out). Only when I raise my right hand does the system show a clear image (opt-in).
+            There is also an eye censor bar that can be removed by pointing up with my index finger as another opt-in action (both can be done independently 
+            and in either order).
+            <br><br>
+            The code detects specific hand gestures (open palm and pointing finger) by analyzing the positions of keypoints on the hand. This took a lot of 
+            trial and error to get right, as the way that the individual points are labeled can get confusing. I left lots of comments in the code to help
+            explain what each section does, as well as a <a href="https://editor.p5js.org/codingtrain/sketches/o5wnL6esQ" target="_blank" style="text-decoration: none;">link</a> to the original source code that I modified for reference. In basic terms, the code uses the
+            ml5.js handpose model to detect hand "landmarks" in real-time from the webcam feed. Each landmark corresponds to a specific point on the hand, 
+            such as fingertips and joints, and the model provides the 3D coordinates of these points.
+        </p>
+        <div class="description-image">
+            <img src="w3-documentation/w3-keypoints.png">
+            <p>
+                diagram of hand keypoints detected by the ml5.js Handpose model (from the ml5.js handpose documentation).
+            </p>
+        </div>
+        <br>
+        <h2 class="description sub-head">🚧 Work In Progress 🚧</h2>
+
+        <div class="description-image">
+            <img src="w3-documentation/w3-1.png" class="wip">
+            <p>
+                I don't have a camera for my desktop, so I used OBS to simulate a virtual camera and used stock photos <br> 
+                to detect the hand gestures (I also ended up recording myself on my phone to use on loop).
+            </p>
+
+            <div class="image-neighbors">
+                <img src="w3-documentation/w3-2.png" class="wip">
+                <img src="w3-documentation/w3-3.png" class="wip">
+            </div>
+            <p>
+                These are some of the first tests to check that the hand detection was working as intended. It detects<br> 
+                both the palm open, and the index finger pointing up (as well as each hand being colour coded).
+            </p>
+        
+            <div class="image-neighbors">
+                <img src="w3-documentation/w3-4.png" class="wip">
+                <img src="w3-documentation/w3-5.png" class="wip">
+            </div>
+            <p>
+                This is when I got the idea for the "consent" system where this little fun dude in the top left displays<br> 
+                the current state of the webcam. I also implemented the eye censor bar that can be removed by pointing<br>
+                up with my index finger around this time too.
+            </p>
+
+            <div class="image-neighbors">
+                <img src="w3-documentation/w3-6.png" class="wip">
+                <img src="w3-documentation/w3-7.png" class="wip">
+            </div>
+            <p>
+                These are some screenshots of the work in progress of the indicator in photoshop, and the two new<br>
+                images I addded for the palm and point gestures.
+            </p>
+            
+            <div class="image-neighbors">
+                <img src="w3-documentation/w3-8.png" class="wip">
+                <img src="w3-documentation/w3-9.png" class="wip">
+            </div>
+            <br>
+            <img src="w3-documentation/w3-10.png" class="wip">
+            <p>
+                (I swear it's not a middle figer idk why it kinda looks like that lol)
+            </p>
+        </div>
+    </div>
+<br>
+<br>
+</body>
+</html>
