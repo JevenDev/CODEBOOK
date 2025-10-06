@@ -43,12 +43,12 @@ function preload(){
     faceMesh = ml5.faceMesh({ flipped: true, maxFaces: 1 });
 
     // indicators
-    imgConsent   = loadImage("images/consent.png");
-    imgNoConsent = loadImage("images/no_consent.png");
-    imgPalmYes   = loadImage("images/palmYes.png");
-    imgPalmNo    = loadImage("images/palmNo.png");
-    imgPointYes  = loadImage("images/pointYes.png");
-    imgPointNo   = loadImage("images/pointNo.png");
+    imgConsent   = loadImage("week-3/images/consent.png");
+    imgNoConsent = loadImage("week-3/images/no_consent.png");
+    imgPalmYes   = loadImage("week-3/images/palmYes.png");
+    imgPalmNo    = loadImage("week-3/images/palmNo.png");
+    imgPointYes  = loadImage("week-3/images/pointYes.png");
+    imgPointNo   = loadImage("week-3/images/pointNo.png");
 }
 
 function setup(){
